@@ -38,6 +38,14 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+
+        $('#btnD').click(function(e) {
+            btnDClick(e);
+        });
+
+        $('#btnE').click(function(e) {
+            btnEClick(e);
+        });
         init();
     });
     
@@ -212,6 +220,25 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         audio2.pause();
+           
+    }
+
+    function btnDClick(e){
+        active = false;
+        var minuteInput = document.getElementById("minute");
+        var secondInput = document.getElementById("second");
+        minuteInput.value = 3;
+        secondInput.value = 0;
+        
+        
+    }
+
+    function btnEClick(e){
+        active = false;
+        var minuteInput = document.getElementById("minute");
+        var secondInput = document.getElementById("second");
+        minuteInput.value = 5;
+        secondInput.value = 0;
         
         
     }
@@ -248,7 +275,9 @@
     <div id="time">Time</div>
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
-    <button id="btnC">Set</button>  
+    <button id="btnC">Set</button>
+    <button id="btnD">3分</button>
+    <button id="btnE">5分</button>  
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>
